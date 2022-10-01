@@ -9,6 +9,31 @@
 </head>
 <body>
     <!-- Email, Country, Zip Code, Password and Password Confirmation fields -->
+
+    <div class="form__container">
+        <form class="myForm">
+            <label id="form__label__email">Email:
+                <input type="text" class="input__text">
+            </label>
+            <label id="form__label__country">Country:
+                <select name="country" id="form__select">
+                    <option value="" disabled selected>-- Please select an option --</option>
+                    <option value="here">Here</option>
+                    <option value="there">There</option>
+                    <option value="USA">United States of America</option>
+                </select>
+            </label>
+            <label id="form__label__password">Please create a password:
+                <input type="password" class="input__text">
+            </label>
+            <label id="form__label__retype-password">
+                <input type="password" class="input__text">
+            </label>
+            <input type="submit" id="form__btn__submit" class="form__btn">
+            <input type="reset" id="form__btn__reset" class="form__btn">
+
+        </form>
+    </div>
     <script src="./scripts/script.js"></script>
 </body>
 </html>
