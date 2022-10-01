@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #1b4965;     /*  var(--primary-color)        */
+    --secondary-color: #cae9ff;   /*  var(--secondary-color)      */
+    --other-one-color: #083049;
+    --other-two-color: #163b52;
+    --other-three-color: #235f85;
+  }
+  
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    height: 100vh;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+}
+
+.myForm {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form__btn_container {
+    display: flex;
+    justify-content: center;
+}
