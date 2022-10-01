@@ -23,18 +23,43 @@ body {
 }
 
 .form__container {
+    border: 1px solid green;
     display: flex;
+    margin: 50px 0;
     justify-content: center;
+    align-items: center;
 }
 
 .myForm {
     border: 1px solid red;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 400px;
+}
+
+label {
+    margin: 10px 0px;
+}
+
+.input__text, #form__select {
+    width: 375px;
+}
+
+#form__select {
+    text-align: center;
 }
 
 .form__btn_container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 20px;
+    width: 225px;
+}
+
+.form__btn {
+    width: 100px;
 }
