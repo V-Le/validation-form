@@ -44,11 +44,11 @@ label {
     margin: 10px 0px;
 }
 
-.input__text, #form__select {
+.input__text, #form__input__country {
     width: 375px;
 }
 
-#form__select {
+#form__input__country {
     text-align: center;
 }
 
