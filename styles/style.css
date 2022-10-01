@@ -23,7 +23,6 @@ body {
 }
 
 .form__container {
-    border: 1px solid green;
     display: flex;
     margin: 50px 0;
     justify-content: center;
@@ -31,7 +30,7 @@ body {
 }
 
 .myForm {
-    border: 1px solid red;
+    background-color: var(--other-one-color);
     border-radius: 15px;
     display: flex;
     flex-direction: column;

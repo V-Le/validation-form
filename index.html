@@ -12,11 +12,14 @@
 
     <div class="form__container">
         <form class="myForm flex_center">
+            <label id="form__label__name">Full Name:<br>
+                <input type="text" class="input__text" required pattern="[A-Za-z]+">
+            </label>
             <label id="form__label__email">Email:<br>
-                <input type="email" class="input__text">
+                <input type="email" class="input__text" required>
             </label>
             <label id="form__label__country">Country:<br>
-                <select name="country" id="form__select">
+                <select name="country" id="form__select" required>
                     <option value="" disabled selected>-- Please select an option --</option>
                     <option value="here">Here</option>
                     <option value="there">There</option>
@@ -24,12 +27,12 @@
                 </select>
             </label>
             <label id="form__label__password">Please create a password:<br>
-                <input type="password" class="input__text">
+                <input type="password" class="input__text" required>
             </label>
             <label id="form__label__retype-password">Please re-type your password:<br>
-                <input type="password" class="input__text">
+                <input type="password" class="input__text" required>
             </label>
-            <div class="form__btn_container flex_center">
+            <div class="form__btn_container">
                 <input type="submit" id="form__btn__submit" class="form__btn">
                 <input type="reset" id="form__btn__reset" class="form__btn">
             </div>
