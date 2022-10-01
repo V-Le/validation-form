@@ -12,25 +12,25 @@
 
     <div class="form__container">
         <form class="myForm flex_center">
-            <label id="form__label__name">Full Name:<br>
-                <input type="text" class="input__text" required pattern="[A-Za-z]+">
+            <label>Full Name:<br>
+                <input type="text" class="input__text" id="form__input__name" required pattern="[A-Za-z]+">
             </label>
-            <label id="form__label__email">Email:<br>
-                <input type="email" class="input__text" required>
+            <label>Email:<br>
+                <input type="email" class="input__text" id="form__input__email" required>
             </label>
-            <label id="form__label__country">Country:<br>
-                <select name="country" id="form__select" required>
+            <label>Country:<br>
+                <select name="country" id="form__input__country" required>
                     <option value="" disabled selected>-- Please select an option --</option>
                     <option value="here">Here</option>
                     <option value="there">There</option>
                     <option value="USA">United States of America</option>
                 </select>
             </label>
-            <label id="form__label__password">Please create a password:<br>
-                <input type="password" class="input__text" required>
+            <label>Please create a password:<br>
+                <input type="password" class="input__text" id="form__input__password" required>
             </label>
-            <label id="form__label__retype-password">Please re-type your password:<br>
-                <input type="password" class="input__text" required>
+            <label>Please re-type your password:<br>
+                <input type="password" class="input__text" id="form__input__retype-password" required>
             </label>
             <div class="form__btn_container">
                 <input type="submit" id="form__btn__submit" class="form__btn">
