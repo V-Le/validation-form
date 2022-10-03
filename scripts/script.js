@@ -9,3 +9,10 @@ inputName.addEventListener('input', () => {
     inputName.checkValidity();
 });
 
+inputName.addEventListener('invalid', () => {
+    if(inputName === '') {
+        inputName.setCustomValidity('Please enter your name.');
+    } else {
+        inputName.setCustomValidity('Please enter a proper name.');
+    }
+});
