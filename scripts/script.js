@@ -33,3 +33,17 @@ inputPassword.addEventListener('invalid', () => {
 })
 
 //Checks if password matches
+inputRetypePassword.addEventListener('input', () => {
+    if (inputPassword.value === inputRetypePassword.value) {
+        inputRetypePassword.setCustomValidity('');
+        inputPassword.checkValidity();
+    } else {
+        inputRetypePassword.setCustomValidity('Passwords must match');
+    };
+});
+
+inputRetypePassword.addEventListener('invalid', () => {
+    if (inputRetypePassword.value === '') {
+        inputRetypePassword.setCustomValidity('Please re-type your password.');
+    };
+});
