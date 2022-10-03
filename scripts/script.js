@@ -11,18 +11,25 @@ const inputRetypePassword = document.querySelector('#form__input__retype-passwor
 });
 
 inputName.addEventListener('invalid', () => {
-    if(inputName === '') {
+    if(inputName.value === '') {
         inputName.setCustomValidity('Please enter your name.');
     } else {
         inputName.setCustomValidity('Please enter a proper name.');
     }
 }); */
 
+//Password Validation
+inputPassword.addEventListener('input', () => {
+    inputPassword.setCustomValidity('');
+    inputPassword.checkValidity();
+});
 
-//Check if password matches
-/* PASSWORD PSUEDOCODE
-Check is password is valid
-if valid, then setCustomValidity is an empty string
-else invalid, then setCustomValidity with error message
-*/
+inputPassword.addEventListener('invalid', () => {
+    if (inputPassword.value === '') {
+        inputPassword.setCustomValidity('Please enter a password.');
+    } else {
+        inputPassword.setCustomValidity('Please enter a password with the correct requirements below');
+    };
+})
 
+//Checks if password matches
