@@ -48,14 +48,14 @@ inputRetypePassword.addEventListener('invalid', () => {
     };
 });
 
-const checkCharLength = document.querySelector('#password-req__icon__6char')
-const checkSpecial = document.querySelector('#password-req__icon__special')
-const checkUpper = document.querySelector('#password-req__icon__upper')
-const checkLower = document.querySelector('#password-req__icon__lower')
-const checkNumber = document.querySelector('#password-req__icon__number')
+//Shows user the password requirements
+const checkCharLength = document.querySelector('#password-req__icon__6char');
+const checkSpecial = document.querySelector('#password-req__icon__special');
+const checkUpper = document.querySelector('#password-req__icon__upper');
+const checkLower = document.querySelector('#password-req__icon__lower');
+const checkNumber = document.querySelector('#password-req__icon__number');
 
 inputPassword.addEventListener('input', () => {
-
     if (inputPassword.value.length >= 6) {
         checkCharLength.classList.remove('fa-xmark');
         checkCharLength.classList.add('fa-check');
@@ -63,7 +63,6 @@ inputPassword.addEventListener('input', () => {
         checkCharLength.classList.remove('fa-check');
         checkCharLength.classList.add('fa-xmark');
     }
-    
     validationIconCheck(checkUpper, /[A-Z]/g);
     validationIconCheck(checkLower, /[a-z]/g);
     validationIconCheck(checkSpecial, /[^\da-zA-Z0-9]/g);
@@ -80,5 +79,5 @@ function validationIconCheck(nodeIcon, regexpress) {
         nodeIcon.classList.remove('fa-check');
         nodeIcon.classList.add('fa-xmark');
     }
-}
+};
 
