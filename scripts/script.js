@@ -4,6 +4,7 @@ const inputCountry = document.querySelector('#form__input__country');
 const inputPassword = document.querySelector('#form__input__password');
 const inputRetypePassword = document.querySelector('#form__input__retype-password');
 
+//Full name Validation
 inputName.addEventListener('input', () => {
     inputName.setCustomValidity('');
     inputName.checkValidity();
