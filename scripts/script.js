@@ -64,42 +64,21 @@ inputPassword.addEventListener('input', () => {
         checkCharLength.classList.add('fa-xmark');
     }
     
-/*     if (passwordCheck.match(/[A-Z]/g)) {
-        checkUpper.classList.remove('fa-xmark');
-        checkUpper.classList.add('fa-check');
-    } else {
-        checkUpper.classList.remove('fa-check');
-        checkUpper.classList.add('fa-xmark');
-    }
-
-    if (passwordCheck.match(/[a-z]/g)) {
-        checkLower.classList.remove('fa-xmark');
-        checkLower.classList.add('fa-check');
-    } else {
-        checkLower.classList.remove('fa-check');
-        checkLower.classList.add('fa-xmark');
-    }
-
-    if (passwordCheck.match(/[^\da-zA-Z0-9]/g)) {
-        checkSpecial.classList.remove('fa-xmark');
-        checkSpecial.classList.add('fa-check');
-    } else {
-        checkSpecial.classList.remove('fa-check');
-        checkSpecial.classList.add('fa-xmark');
-    } */
-
+    validationIconCheck(checkUpper, /[A-Z]/g);
+    validationIconCheck(checkLower, /[a-z]/g);
+    validationIconCheck(checkSpecial, /[^\da-zA-Z0-9]/g);
     validationIconCheck(checkNumber, /[0-9]/g);
 });
 
-function validationIconCheck(iconNode, regexpress) {
+function validationIconCheck(nodeIcon, regexpress) {
     let passwordCheck = inputPassword.value;
 
     if (passwordCheck.match(regexpress)) {
-        iconNode.classList.remove('fa-xmark');
-        iconNode.classList.add('fa-check');
+        nodeIcon.classList.remove('fa-xmark');
+        nodeIcon.classList.add('fa-check');
     } else {
-        iconNode.classList.remove('fa-check');
-        iconNode.classList.add('fa-xmark');
+        nodeIcon.classList.remove('fa-check');
+        nodeIcon.classList.add('fa-xmark');
     }
 }
 
