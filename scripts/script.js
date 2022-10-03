@@ -5,7 +5,7 @@ const inputPassword = document.querySelector('#form__input__password');
 const inputRetypePassword = document.querySelector('#form__input__retype-password');
 
 //Full name Validation
-inputName.addEventListener('input', () => {
+/* inputName.addEventListener('input', () => {
     inputName.setCustomValidity('');
     inputName.checkValidity();
 });
@@ -16,4 +16,13 @@ inputName.addEventListener('invalid', () => {
     } else {
         inputName.setCustomValidity('Please enter a proper name.');
     }
-});
+}); */
+
+
+//Check if password matches
+/* PASSWORD PSUEDOCODE
+Check is password is valid
+if valid, then setCustomValidity is an empty string
+else invalid, then setCustomValidity with error message
+*/
+
