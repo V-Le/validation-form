@@ -5,7 +5,7 @@ const inputPassword = document.querySelector('#form__input__password');
 const inputRetypePassword = document.querySelector('#form__input__retype-password');
 
 //Full name Validation
-/* inputName.addEventListener('input', () => {
+inputName.addEventListener('input', () => {
     inputName.setCustomValidity('');
     inputName.checkValidity();
 });
@@ -16,7 +16,7 @@ inputName.addEventListener('invalid', () => {
     } else {
         inputName.setCustomValidity('Please enter a proper name.');
     }
-}); */
+});
 
 //Password Validation
 inputPassword.addEventListener('input', () => {
@@ -47,3 +47,59 @@ inputRetypePassword.addEventListener('invalid', () => {
         inputRetypePassword.setCustomValidity('Please re-type your password.');
     };
 });
+
+const checkCharLength = document.querySelector('#password-req__icon__6char')
+const checkSpecial = document.querySelector('#password-req__icon__special')
+const checkUpper = document.querySelector('#password-req__icon__upper')
+const checkLower = document.querySelector('#password-req__icon__lower')
+const checkNumber = document.querySelector('#password-req__icon__number')
+
+inputPassword.addEventListener('input', () => {
+
+    if (inputPassword.value.length >= 6) {
+        checkCharLength.classList.remove('fa-xmark');
+        checkCharLength.classList.add('fa-check');
+    } else {
+        checkCharLength.classList.remove('fa-check');
+        checkCharLength.classList.add('fa-xmark');
+    }
+    
+/*     if (passwordCheck.match(/[A-Z]/g)) {
+        checkUpper.classList.remove('fa-xmark');
+        checkUpper.classList.add('fa-check');
+    } else {
+        checkUpper.classList.remove('fa-check');
+        checkUpper.classList.add('fa-xmark');
+    }
+
+    if (passwordCheck.match(/[a-z]/g)) {
+        checkLower.classList.remove('fa-xmark');
+        checkLower.classList.add('fa-check');
+    } else {
+        checkLower.classList.remove('fa-check');
+        checkLower.classList.add('fa-xmark');
+    }
+
+    if (passwordCheck.match(/[^\da-zA-Z0-9]/g)) {
+        checkSpecial.classList.remove('fa-xmark');
+        checkSpecial.classList.add('fa-check');
+    } else {
+        checkSpecial.classList.remove('fa-check');
+        checkSpecial.classList.add('fa-xmark');
+    } */
+
+    validationIconCheck(checkNumber, /[0-9]/g);
+});
+
+function validationIconCheck(iconNode, regexpress) {
+    let passwordCheck = inputPassword.value;
+
+    if (passwordCheck.match(regexpress)) {
+        iconNode.classList.remove('fa-xmark');
+        iconNode.classList.add('fa-check');
+    } else {
+        iconNode.classList.remove('fa-check');
+        iconNode.classList.add('fa-xmark');
+    }
+}
+

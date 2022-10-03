@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/db0eed82f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Email, Country, Zip Code, Password and Password Confirmation fields -->
@@ -33,13 +34,18 @@
             <label>Please re-type your password:<br>
                 <input type="password" class="input__text" id="form__input__retype-password" required>
             </label>
-<!--    For later implimentation
-                 <div id="form__container__password-requirements">
+            <div id="form__container__password-requirements">
+                <i id="password-req__icon__6char" class="fa-solid fa-xmark"></i>
                 <span class="password__requirement__span"  id="password-req__6chars">Needs to be 6+ characters</span><br>
+                <i id="password-req__icon__special" class="fa-solid fa-xmark"></i>
                 <span class="password__requirement__span" id="password-req__special-char">Needs to include special character</span><br>
+                <i id="password-req__icon__upper" class="fa-solid fa-xmark"></i>
                 <span class="password_requirement__span" id="password-req__uppercase">Needs to include 1 uppercase letter</span><br>
-                <span class="password_requirement__span" id="password-req__lowercase">Needs to include 1 lowercase letter</span>
-            </div> -->
+                <i id="password-req__icon__lower" class="fa-solid fa-xmark"></i>
+                <span class="password_requirement__span" id="password-req__lowercase">Needs to include 1 lowercase letter</span><br>
+                <i id="password-req__icon__number" class="fa-solid fa-xmark"></i>
+                <span class="password_requirement__span" id="password-req__number">Needs to include 1 number</span>
+            </div>
             
             <div class="form__btn_container">
                 <input type="submit" id="form__btn__submit" class="form__btn">
